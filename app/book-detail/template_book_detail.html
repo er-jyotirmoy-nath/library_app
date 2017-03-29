@@ -1,0 +1,19 @@
+<div class="container">
+
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Loaned</th>
+    
+  </tr>
+  <tr ng-repeat="item in $ctrl.list">
+      <td>{{item.LIB_ID}}</td>
+      <td>{{item.BOOK_NAME}}</td>
+      <td>{{item.AUTHOR}}</td>
+      <td>{{item.LOAN | checkloan}}</td>
+    
+  </tr>
+</table>
+</div>

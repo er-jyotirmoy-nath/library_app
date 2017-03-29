@@ -1,0 +1,21 @@
+<div class="container">
+<h2>List of books in the library</h2><hr>
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Loaned</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="item in $ctrl.list">
+      <td><a href="#!/bookdetails/{{item.LIB_ID}}">{{item.LIB_ID}}</a></td>
+      <td>{{item.BOOK_NAME}}</td>
+      <td>{{item.AUTHOR}}</td>
+      <td>{{item.LOAN | checkloan}}</td>
+      <td ><button ng-if="item.LOAN" class="btn btn-default" ng-click="$ctrl.loan_book(item.LIB_ID)">Loan</button></td>
+      <td><button  class="btn btn-default" ng-click="$ctrl.remove_book(item.LIB_ID)">Remove</button></td>
+  </tr>
+</table>
+</div>

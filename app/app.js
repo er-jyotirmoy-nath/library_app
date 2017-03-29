@@ -3,12 +3,26 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'ngResource',
+  'myApp.version',
+  'library_factory',
+  'library_views',
+  'library_add',
+  'lib_filter',
+  'book_det'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.
+          when('/viewbooks',{
+              template:"<library-view></library-view>"
+          })
+          .when('/addbooks',{
+              template:"<add-book></add-book>"
+          })
+                  .when('/bookdetails/:bid',{
+                      template:"<book-detail></book-detail>"
+                  })
+          .otherwise('/viewbooks');
+  
 }]);

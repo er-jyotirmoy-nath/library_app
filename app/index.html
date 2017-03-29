@@ -16,8 +16,8 @@
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
+    <li><a href="#!/viewbooks">View Books</a></li>
+    <li><a href="#!/addbooks">Add Books</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -26,16 +26,31 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="library_factory/library_factory_module.js"></script>
+  <script src="library_factory/library_factory_component.js"></script>
+  <script src="library_view/library_view_module.js"></script>
+  <script src="library_view/library_view_component.js"></script>
+  <script src="library_add/library_add_model.js"></script>
+  <script src="library_add/library_add_component.js"></script>
+  <script src="filter/filter_module.js"></script>
+  <script src="filter/filter_component.js"></script>
+  <script src="book-detail/book_detail_module.js"></script>
+  <script src="book-detail/book_detail_component.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
